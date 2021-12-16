@@ -9,12 +9,13 @@ import android.util.Log
 import android.view.View
 import android.widget.ImageView
 import android.widget.Toast
-import kotlinx.android.synthetic.main.activity_main.*
+import com.example.memorama.databinding.ActivityMainBinding
 import java.util.*
 import kotlin.collections.ArrayList
 
 class MainActivity : AppCompatActivity() {
 
+    lateinit var  binding: ActivityMainBinding
     var listaImageViewRotas = ArrayList<ImageView>()
     var listaImageView = ArrayList<ImageView>()
     var listaDePosiciones = ArrayList<Int>()
@@ -25,48 +26,49 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding  = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
 
-        listaImageView.add(img0)
-        listaImageView.add(img1)
-        listaImageView.add(img2)
-        listaImageView.add(img3)
-        listaImageView.add(img4)
-        listaImageView.add(img5)
-        listaImageView.add(img6)
-        listaImageView.add(img7)
-        listaImageView.add(img8)
-        listaImageView.add(img9)
-        listaImageView.add(img10)
-        listaImageView.add(img11)
-        listaImageView.add(img12)
-        listaImageView.add(img13)
-        listaImageView.add(img14)
-        listaImageView.add(img15)
-        listaImageView.add(img16)
-        listaImageView.add(img17)
+        listaImageView.add(binding.img0)
+        listaImageView.add(binding.img1)
+        listaImageView.add(binding.img2)
+        listaImageView.add(binding.img3)
+        listaImageView.add(binding.img4)
+        listaImageView.add(binding.img5)
+        listaImageView.add(binding.img6)
+        listaImageView.add(binding.img7)
+        listaImageView.add(binding.img8)
+        listaImageView.add(binding.img9)
+        listaImageView.add(binding.img10)
+        listaImageView.add(binding.img11)
+        listaImageView.add(binding.img12)
+        listaImageView.add(binding.img13)
+        listaImageView.add(binding.img14)
+        listaImageView.add(binding.img15)
+        listaImageView.add(binding.img16)
+        listaImageView.add(binding.img17)
 
 
 
-        listaImageViewRotas.add(img0Break)
-        listaImageViewRotas.add(img1Break)
-        listaImageViewRotas.add(img2Break)
-        listaImageViewRotas.add(img3Break)
-        listaImageViewRotas.add(img4Break)
-        listaImageViewRotas.add(img5Break)
-        listaImageViewRotas.add(img6Break)
-        listaImageViewRotas.add(img7Break)
-        listaImageViewRotas.add(img8Break)
-        listaImageViewRotas.add(img9Break)
-        listaImageViewRotas.add(img10Break)
-        listaImageViewRotas.add(img11Break)
-        listaImageViewRotas.add(img12Break)
-        listaImageViewRotas.add(img13Break)
-        listaImageViewRotas.add(img14Break)
-        listaImageViewRotas.add(img15Break)
-        listaImageViewRotas.add(img16Break)
-        listaImageViewRotas.add(img17Break)
+        listaImageViewRotas.add(binding.img0Break)
+        listaImageViewRotas.add(binding.img1Break)
+        listaImageViewRotas.add(binding.img2Break)
+        listaImageViewRotas.add(binding.img3Break)
+        listaImageViewRotas.add(binding.img4Break)
+        listaImageViewRotas.add(binding.img5Break)
+        listaImageViewRotas.add(binding.img6Break)
+        listaImageViewRotas.add(binding.img7Break)
+        listaImageViewRotas.add(binding.img8Break)
+        listaImageViewRotas.add(binding.img9Break)
+        listaImageViewRotas.add(binding.img10Break)
+        listaImageViewRotas.add(binding.img11Break)
+        listaImageViewRotas.add(binding.img12Break)
+        listaImageViewRotas.add(binding.img13Break)
+        listaImageViewRotas.add(binding.img14Break)
+        listaImageViewRotas.add(binding.img15Break)
+        listaImageViewRotas.add(binding.img16Break)
+        listaImageViewRotas.add(binding.img17Break)
 
         ocultarImagenes()
         cargarPosicionesRandom()

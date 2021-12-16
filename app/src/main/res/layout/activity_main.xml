@@ -337,7 +337,7 @@
                 />
         </FrameLayout>
     </TableRow>
-
+.
 
     <Button
     android:id="@+id/reinicio"
